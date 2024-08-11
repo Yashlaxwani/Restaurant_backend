@@ -10,11 +10,9 @@ import authRoutes from './routes/auth.js';
 const app =express();
 dotenv.config({ path: "./config/config.env"});
 
-app.use(cors
-    ({
-    origin:['*'],
-})
-);
+app.use(cors({
+    origin: '*',
+}));
 
 app.use(express.json());//to convert the data from json string format to json object
 app.use(express.urlencoded({extended:true}));//data of which type
